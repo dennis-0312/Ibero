@@ -1,0 +1,190 @@
+{
+    "boleta": {
+        "IDE": {
+            "numeracion": "B102-00003302",
+            "fechaEmision": "2023-03-25",
+            "horaEmision": "17:59:00",
+            "codTipoDocumento": "03",
+            "tipoMoneda": "PEN",
+            "numeroOrdenCompra": "",
+            "fechaVencimiento": ""
+        },
+        "EMI": {
+            "tipoDocId": "6",
+            "numeroDocId": "20295754444",
+            "nombreComercial": "Ibero Librerías",
+            "razonSocial": "IBERO A & G S.A.C.",
+            "direccion": "Av. Oscar R. Benavides Nro. 500 (Ex Av. Diagonal - Esq. con Calle Berlin)",
+            "departamento": "CC Open Plaza Tda. L06 Huancayo, Junín ",
+            "provincia": "",
+            "distrito": "",
+            "codigoPais": "",
+            "telefono": "015006720",
+            "correoElectronico": "ibero@ibero.com.pe",
+            "codigoAsigSUNAT": "0000"
+        },
+        "REC": {
+            "tipoDocId": "0",
+            "numeroDocId": "99999999",
+            "razonSocial": "Clientes-Varios",
+            "direccion": " ",
+            "departamento": "Lima",
+            "provincia": "Perú",
+            "distrito": "",
+            "codigoPais": "PE",
+            "telefono": "",
+            "correoElectronico": ""
+        },
+        "DRF": [],
+        "CAB": {
+            "gravadas": {
+                "codigo": "1001",
+                "totalVentas": "12.11"
+            },
+            "exoneradas": {
+                "codigo": "1003",
+                "totalVentas": "123.00"
+            },
+            "totalImpuestos": [
+                {
+                    "idImpuesto": "1000",
+                    "montoImpuesto": "2.18"
+                },
+                {
+                    "idImpuesto": "9997",
+                    "montoImpuesto": "0.00"
+                }
+            ],
+            "importeTotal": "137.29",
+            "tipoOperacion": "0101",
+            "leyenda": [
+                {
+                    "codigo": "1000",
+                    "descripcion": "CIENTO TREINTA Y SIETE SOLES CON VEINTINUEVE CENTIMOS"
+                }
+            ],
+            "montoTotalImpuestos": "2.18"
+        },
+        "DET": [
+            {
+                "numeroItem": "1",
+                "codigoProducto": "9788418382499",
+                "descripcionProducto": "SENSOR",
+                "cantidadItems": "1",
+                "unidad": "NIU",
+                "valorUnitario": "67",
+                "precioVentaUnitario": "67",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "9997",
+                        "montoImpuesto": "0.00",
+                        "tipoAfectacion": "20",
+                        "montoBase": "67.00",
+                        "porcentaje": "0"
+                    }
+                ],
+                "valorVenta": "67.00",
+                "montoTotalImpuestos": "0"
+            },
+            {
+                "numeroItem": "2",
+                "codigoProducto": "400816",
+                "descripcionProducto": "BOLSA BIODEGRADABLE 12X16",
+                "cantidadItems": "1",
+                "unidad": "NIU",
+                "valorUnitario": "0.25",
+                "precioVentaUnitario": "0.295",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "1000",
+                        "montoImpuesto": "0.05",
+                        "tipoAfectacion": "10",
+                        "montoBase": "0.25",
+                        "porcentaje": "18"
+                    }
+                ],
+                "valorVenta": "0.25",
+                "montoTotalImpuestos": "0.05"
+            },
+            {
+                "numeroItem": "3",
+                "codigoProducto": "9788418933196",
+                "descripcionProducto": "FLORES DE PAPEL",
+                "cantidadItems": "1",
+                "unidad": "NIU",
+                "valorUnitario": "56",
+                "precioVentaUnitario": "56",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "9997",
+                        "montoImpuesto": "0.00",
+                        "tipoAfectacion": "20",
+                        "montoBase": "56.00",
+                        "porcentaje": "0"
+                    }
+                ],
+                "valorVenta": "56.00",
+                "montoTotalImpuestos": "0"
+            },
+            {
+                "numeroItem": "4",
+                "codigoProducto": "7891360642602",
+                "descripcionProducto": "ESTUCHE DE COLORES 12 UNIDADES",
+                "cantidadItems": "1",
+                "unidad": "NIU",
+                "valorUnitario": "20",
+                "precioVentaUnitario": "0.000000",
+                "cargoDescuento": [
+                    {
+                        "indicadorCargoDescuento": "false",
+                        "codigoCargoDescuento": "00",
+                        "factorCargoDescuento": "1",
+                        "montoCargoDescuento": "20.00",
+                        "montoBaseCargoDescuento": "20"
+                    }
+                ],
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "9997",
+                        "montoImpuesto": "0.00",
+                        "tipoAfectacion": "20",
+                        "montoBase": "0.00",
+                        "porcentaje": "0"
+                    }
+                ],
+                "valorVenta": "0.00",
+                "montoTotalImpuestos": "0.00"
+            },
+            {
+                "numeroItem": "6",
+                "codigoProducto": "8437018304776",
+                "descripcionProducto": "MARCAPAGINAS - BIENVENIDO A MI MORADA. ENTRA LIBREMENTE, POR TU PROPIA VOLUNTAD…",
+                "cantidadItems": "1",
+                "unidad": "NIU",
+                "valorUnitario": "11.86",
+                "precioVentaUnitario": "13.9948",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "1000",
+                        "montoImpuesto": "2.13",
+                        "tipoAfectacion": "10",
+                        "montoBase": "11.86",
+                        "porcentaje": "18"
+                    }
+                ],
+                "valorVenta": "11.86",
+                "montoTotalImpuestos": "2.13"
+            }
+        ],
+        "ADI": [
+            {
+                "tituloAdicional": "CUENTAS CORRIENTES",
+                "valorAdicional": "BANCO DE CRÉDITO DEL PERÚ\r\nBCP - CTA. CTE. S/ 194-0159868026\r\nCCI BCP MN           002-194-000203272162-99\r\nSOLES\r\n\r\nBCP - CTA. CTE. $ 194-0203272162\r\nCCI BCP ME           002-194-0000203272162-99\r\nDOLARES"
+            },
+            {
+                "tituloAdicional": "NOTA",
+                "valorAdicional": ""
+            }
+        ]
+    }
+}
