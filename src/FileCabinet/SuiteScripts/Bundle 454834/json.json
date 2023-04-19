@@ -1,0 +1,200 @@
+{
+    "factura": {
+        "IDE": {
+            "numeracion": "F114-00000313",
+            "fechaEmision": "2023-04-13",
+            "horaEmision": "13:10:00",
+            "codTipoDocumento": "01",
+            "tipoMoneda": "PEN",
+            "numeroOrdenCompra": "",
+            "fechaVencimiento": "2023-06-13"
+        },
+        "EMI": {
+            "tipoDocId": "6",
+            "numeroDocId": "20295754444",
+            "nombreComercial": "Ibero Librerías",
+            "razonSocial": "IBERO A & G S.A.C.",
+            "direccion": "Av. Oscar R. Benavides Nro. 500 (Ex Av. Diagonal - Esq. con Calle Berlin)",
+            "departamento": " ",
+            "provincia": "",
+            "distrito": "",
+            "codigoPais": "PE",
+            "telefono": "015006720",
+            "correoElectronico": "ibero@ibero.com.pe",
+            "codigoAsigSUNAT": "0000"
+        },
+        "REC": {
+            "tipoDocId": "6",
+            "numeroDocId": "20507885391",
+            "razonSocial": "SERVICIOS DE TRASTIENDA SOCIEDAD ANONIMA CERRADA",
+            "direccion": "AV SIETE NRO.229 URB. RINCONADA BAJA - LA MOLINA ",
+            "departamento": "Lima",
+            "provincia": "",
+            "distrito": "",
+            "codigoPais": "PE",
+            "telefono": "",
+            "correoElectronico": ""
+        },
+        "DRF": [],
+        "CAB": {
+            "exoneradas": {
+                "codigo": "1003",
+                "totalVentas": "14410.00"
+            },
+            "totalImpuestos": [
+                {
+                    "idImpuesto": "9997",
+                    "montoImpuesto": "0.00"
+                },
+                {
+                    "idImpuesto": "7152",
+                    "montoImpuesto": "75.00"
+                }
+            ],
+            "importeTotal": "9078.30",
+            "tipoOperacion": "0101",
+            "leyenda": [
+                {
+                    "codigo": "1000",
+                    "descripcion": "NUEVE MIL SETENTA Y OCHO SOLES CON TREINTA CENTIMOS"
+                }
+            ],
+            "montoTotalImpuestos": "450.00",
+            "totalDescuentos": [
+                {
+                    "codigo": "2005",
+                    "totalDescuentos": "5331.7"
+                }
+            ],
+            "cargoDescuento": [
+                {
+                    "indicadorCargoDescuento": "false",
+                    "codigoCargoDescuento": "03",
+                    "factorCargoDescuento": "0.37",
+                    "montoCargoDescuento": "5331.7",
+                    "montoBaseCargoDescuento": "14410"
+                }
+            ]
+        },
+        "DET": [
+            {
+                "numeroItem": "1",
+                "codigoProducto": "123456789001",
+                "descripcionProducto": "FERIA DEL LIBRO PROM IBERO S/. 9.90",
+                "cantidadItems": "400",
+                "unidad": "NIU",
+                "valorUnitario": "9.9",
+                "precioVentaUnitario": "9.9",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "9997",
+                        "montoImpuesto": "0.00",
+                        "tipoAfectacion": "20",
+                        "montoBase": "3960.00",
+                        "porcentaje": "0"
+                    },
+                    {
+                        "idImpuesto": "7152",
+                        "montoImpuesto": "200.00",
+                        "tipoAfectacion": "20",
+                        "montoBase": "400",
+                        "porcentaje": "0.50"
+                    }
+                ],
+                "valorVenta": "3960.00",
+                "montoTotalImpuestos": "200.00"
+            },
+            {
+                "numeroItem": "2",
+                "codigoProducto": "999999999002",
+                "descripcionProducto": "FERIA DEL LIBRO PROM IBERO S/. 14.90",
+                "cantidadItems": "200",
+                "unidad": "NIU",
+                "valorUnitario": "14.9",
+                "precioVentaUnitario": "14.9",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "9997",
+                        "montoImpuesto": "0.00",
+                        "tipoAfectacion": "20",
+                        "montoBase": "2980.00",
+                        "porcentaje": "0"
+                    },
+                    {
+                        "idImpuesto": "7152",
+                        "montoImpuesto": "100.00",
+                        "tipoAfectacion": "20",
+                        "montoBase": "200",
+                        "porcentaje": "0.50"
+                    }
+                ],
+                "valorVenta": "2980.00",
+                "montoTotalImpuestos": "100.00"
+            },
+            {
+                "numeroItem": "3",
+                "codigoProducto": "999999999003",
+                "descripcionProducto": "FERIA DEL LIBRO PROM IBERO S/. 19.90",
+                "cantidadItems": "150",
+                "unidad": "NIU",
+                "valorUnitario": "19.9",
+                "precioVentaUnitario": "19.9",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "9997",
+                        "montoImpuesto": "0.00",
+                        "tipoAfectacion": "20",
+                        "montoBase": "2985.00",
+                        "porcentaje": "0"
+                    },
+                    {
+                        "idImpuesto": "7152",
+                        "montoImpuesto": "75.00",
+                        "tipoAfectacion": "20",
+                        "montoBase": "150",
+                        "porcentaje": "0.50"
+                    }
+                ],
+                "valorVenta": "2985.00",
+                "montoTotalImpuestos": "75.00"
+            },
+            {
+                "numeroItem": "4",
+                "codigoProducto": "999999999004",
+                "descripcionProducto": "FERIA DEL LIBRO PROM IBERO S/. 29.90",
+                "cantidadItems": "150",
+                "unidad": "NIU",
+                "valorUnitario": "29.9",
+                "precioVentaUnitario": "29.9",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "9997",
+                        "montoImpuesto": "0.00",
+                        "tipoAfectacion": "20",
+                        "montoBase": "4485.00",
+                        "porcentaje": "0"
+                    },
+                    {
+                        "idImpuesto": "7152",
+                        "montoImpuesto": "75.00",
+                        "tipoAfectacion": "20",
+                        "montoBase": "150",
+                        "porcentaje": "0.50"
+                    }
+                ],
+                "valorVenta": "4485.00",
+                "montoTotalImpuestos": "75.00"
+            }
+        ],
+        "ADI": [
+            {
+                "tituloAdicional": "CUENTAS CORRIENTES",
+                "valorAdicional": "BANCO DE CRÉDITO DEL PERÚ\r\nBCP - CTA. CTE. S/ 194-0159868026\r\nCCI BCP MN           002-194-000203272162-99\r\nSOLES\r\n\r\nBCP - CTA. CTE. $ 194-0203272162\r\nCCI BCP ME           002-194-0000203272162-99\r\nDOLARES"
+            },
+            {
+                "tituloAdicional": "NOTA",
+                "valorAdicional": "CONDICION DE PAGO:  CREDITO 1 CUOTA  VENCIMIENTO  13/06/2023 S/ 9078.30- OC: 5500571595"
+            }
+        ]
+    }
+}
