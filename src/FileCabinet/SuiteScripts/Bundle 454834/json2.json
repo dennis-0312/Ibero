@@ -158,9 +158,9 @@
                 "totalImpuestos": [
                     {
                         "idImpuesto": "1000",
-                        "montoImpuesto": "0.00",
+                        "montoImpuesto": "0.05",
                         "tipoAfectacion": "10",
-                        "montoBase": "0.00",
+                        "montoBase": "0.25",
                         "porcentaje": "18"
                     }
                 ],

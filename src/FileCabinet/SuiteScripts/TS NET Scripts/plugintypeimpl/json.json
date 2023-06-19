@@ -1,0 +1,93 @@
+{
+    "boleta": {
+        "IDE": {
+            "numeracion": "0012-00201015",
+            "fechaEmision": "2023-04-16",
+            "horaEmision": "16:19:00",
+            "codTipoDocumento": "03",
+            "tipoMoneda": "PEN",
+            "numeroOrdenCompra": "",
+            "fechaVencimiento": ""
+        },
+        "EMI": {
+            "tipoDocId": "6",
+            "numeroDocId": "20295754444",
+            "nombreComercial": "Ibero Librerías",
+            "razonSocial": "IBERO A & G S.A.C.",
+            "direccion": "Av. Oscar R. Benavides Nro. 500 (Ex Av. Diagonal - Esq. con Calle Berlin)",
+            "departamento": "AV. MALECON DE LA RESERVA 610 TDA 210 CC LARCOMAR LIMA-LIMA-MIRAFLORES - 242-6777 ",
+            "provincia": "",
+            "distrito": "",
+            "codigoPais": "PE",
+            "telefono": "015006720",
+            "correoElectronico": "ibero@ibero.com.pe",
+            "codigoAsigSUNAT": "0000"
+        },
+        "REC": {
+            "tipoDocId": "1",
+            "numeroDocId": "99999999",
+            "razonSocial": "Clientes-Varios",
+            "direccion": "Dirección General Dirección General",
+            "departamento": "Lima",
+            "provincia": "Perú",
+            "distrito": "",
+            "codigoPais": "PE",
+            "telefono": "",
+            "correoElectronico": ""
+        },
+        "DRF": [],
+        "CAB": {
+            "exoneradas": {
+                "codigo": "1003",
+                "totalVentas": "69.00"
+            },
+            "totalImpuestos": [
+                {
+                    "idImpuesto": "9997",
+                    "montoImpuesto": "0.00"
+                }
+            ],
+            "importeTotal": "69.00",
+            "tipoOperacion": "0101",
+            "leyenda": [
+                {
+                    "codigo": "1000",
+                    "descripcion": "SESENTA Y NUEVE SOLES "
+                }
+            ],
+            "montoTotalImpuestos": "0.00"
+        },
+        "DET": [
+            {
+                "numeroItem": "1",
+                "codigoProducto": "9789584291837",
+                "descripcionProducto": "A PRUEBA DE FUEGO",
+                "cantidadItems": "1",
+                "unidad": "NIU",
+                "valorUnitario": "69",
+                "precioVentaUnitario": "69",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "9997",
+                        "montoImpuesto": "0.00",
+                        "tipoAfectacion": "20",
+                        "montoBase": "69.00",
+                        "porcentaje": "0"
+                    }
+                ],
+                "valorVenta": "69.00",
+                "montoTotalImpuestos": "0"
+            }
+        ],
+        "ADI": [
+            {
+                "tituloAdicional": "CUENTAS CORRIENTES",
+                "valorAdicional": "BANCO DE CRÉDITO DEL PERÚ\r\nBCP - CTA. CTE. S/ 194-0159868026\r\nCCI BCP MN           002-194-000159868026-90\r\nSOLES\r\n\r\nBCP - CTA. CTE. $ 194-0203272162\r\nCCI BCP ME           002-194-000203272162-99\r\nDOLARES"
+            },
+            {
+                "tituloAdicional": "NOTA",
+                "valorAdicional": ""
+            }
+        ]
+    }
+}

@@ -80,6 +80,7 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
                 } else {
                     logStatus(internalId, 'Ingresando a envío');
                     send = sendDocument(getcredentials.username, getcredentials.password, tokensend, urlsendinfo, request, array);
+
                     sleep(3000);
                     statustrasanction = send.responsecode;
                     logStatus(internalId, send.response);
@@ -280,6 +281,7 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
                 headers1['Accept'] = '*/*';
                 headers1['Content-Type'] = 'application/json';
                 headers1['Authorization'] = token;
+
                 var myresponse = https.post({
                     url: url,
                     body: req,
@@ -550,7 +552,7 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
 
 
                             // COUPON CODE
-                            search.createColumn({ name: "couponcode", label: "52 IL COUPON CODE" }),
+                            search.createColumn({ name: "promocode", label: "52 IL PROMOTION CODE" }),
                             // AMOUNT COUPON CODE (PURCHASE DISCOUNT)
                             search.createColumn({ name: "purchasediscount", label: "53 IL PURCHASE DISCOUNT" }),
                             // IL NOTA
@@ -1029,7 +1031,11 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
                     var itemtype = openRecord.getSublistValue({ sublistId: 'item', fieldId: 'itemtype', line: i });
                     var taxrate1 = parseFloat(openRecord.getSublistValue({ sublistId: 'item', fieldId: 'taxrate1', line: i }));
                     var tax1amt = parseFloat(openRecord.getSublistValue({ sublistId: 'item', fieldId: 'tax1amt', line: i }));
+                    var directtax1amt = tax1amt
+                    var directamount = amount
+                    //logStatus(documentid, 'tax1amt1: ' + tax1amt);
                     var montoimpuesto = parseFloat(openRecord.getSublistValue({ sublistId: 'item', fieldId: 'tax1amt', line: i }));
+                    var isicbp = openRecord.getSublistValue({ sublistId: 'item', fieldId: 'custcol_pe_is_icbp', line: i });
 
                     if (itemtype == 'InvtPart' || itemtype == 'Service' || itemtype == 'NonInvtPart') {
                         precioVentaUnitario = (rate + (rate * (taxrate1 / 100)));
@@ -1061,7 +1067,6 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
 
                             try {
                                 itemtype_discount = openRecord.getSublistValue({ sublistId: 'item', fieldId: 'itemtype', line: i + 1 });
-                                log.debug('AnyDiscount', itemtype_discount);
                             } catch (error) { }
 
                             if (itemtype_discount == 'Discount') {
@@ -1175,6 +1180,7 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
                             var montobasecargodscto = amount
                             amount = amount - amount_discount_line;
                             tax1amt = tax1amt - tax1amt_discount_line;
+                            //logStatus(documentid, 'tax1amt2: ' + tax1amt);
 
                             if (taxcode_display == 'IGV_PE:S-PE') {  // GRAVADAS
                                 indicadorcargodescuento = 'false'; // (cargo = true , Descuento = false)
@@ -1215,7 +1221,13 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
                                 montoBaseCargoDescuento: montobasecargodscto.toString()
                             });
                         }
-
+                        //logStatus(documentid, 'tax1amt3: ' + tax1amt);
+                        if (tax1amt == 0) {
+                            tax1amt = directtax1amt
+                        }
+                        if (amount == 0) {
+                            amount = directamount
+                        }
                         jsonTotalImpuestos.push({
                             idImpuesto: idimpuesto,
                             montoImpuesto: tax1amt.toFixed(2),
@@ -1223,8 +1235,9 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
                             montoBase: amount.toFixed(2).toString(),
                             porcentaje: taxrate1.toString()
                         });
-                        //logStatus(documentid, JSON.stringify(jsonTotalImpuestos));
-                        if (itemtype == 'NonInvtPart') {
+                        //logStatus(documentid, JSON.stringify(isicbp));
+                        if (itemtype == 'NonInvtPart' || isicbp == true) {
+                            logStatus(documentid, 'Entré a ICBP: ' + isicbp);
                             var montoImp = 0.5 * parseInt(quantity);
                             tax1amt = (tax1amt + montoImp).toFixed(2);
                             taxtotal = parseFloat(taxtotal) + montoImp;
@@ -2847,6 +2860,8 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
                         var taxrate1 = parseFloat(openRecord.getSublistValue({ sublistId: 'item', fieldId: 'taxrate1', line: i }));
                         var tax1amt = parseFloat(openRecord.getSublistValue({ sublistId: 'item', fieldId: 'tax1amt', line: i }));
                         var montoimpuesto = parseFloat(openRecord.getSublistValue({ sublistId: 'item', fieldId: 'tax1amt', line: i }));
+                        var isicbp = openRecord.getSublistValue({ sublistId: 'item', fieldId: 'custcol_pe_is_icbp', line: i });
+
 
                         if (itemtype == 'InvtPart' || itemtype == 'Service') {
                             precioVentaUnitario = (rate + (rate * (taxrate1 / 100)));

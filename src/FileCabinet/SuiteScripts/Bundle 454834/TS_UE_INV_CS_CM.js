@@ -157,7 +157,7 @@ define(['N/log', 'N/search', 'N/record', 'N/runtime', 'N/redirect', 'N/url', 'N/
                     objRecord.setValue({ fieldId: 'tranid', value: ref_no });
                 } else {
                     const customform = objRecord.getValue({ fieldId: 'customform' });
-                    const customer = objRecord.getValue({ fieldId: 'entity' }); //TODO: Activar cuando tipo de documento venga de cliente
+                    const customer = objRecord.getValue({ fieldId: 'entity' }); //!: Activar cuando tipo de documento venga de cliente
                     const location = objRecord.getValue({ fieldId: 'location' });
                     let total = String(objRecord.getValue({ fieldId: 'total' }));
                     if (objRecord.type == INVOICE) {
@@ -185,12 +185,12 @@ define(['N/log', 'N/search', 'N/record', 'N/runtime', 'N/redirect', 'N/url', 'N/
                             prefix = 'ND-';
                         } else {
                             let searchField = search.lookupFields({ type: search.Type.CUSTOMER, id: customer, columns: ['custentity_pe_document_type'] });
-                            if (searchField.custentity_pe_document_type[0].value == DOCUMENT_TYPE_RUC) {//TODO: Activar cuando tipo de documento venga de cliente
+                            if (searchField.custentity_pe_document_type[0].value == DOCUMENT_TYPE_RUC) {//!: Activar cuando tipo de documento venga de cliente
                                 // if (doctype == DOCUMENT_TYPE_FACTURA) { //*Activar cuando venga a demanda
-                                doctype = DOCUMENT_TYPE_FACTURA;//TODO: Activar cuando tipo de documento venga de cliente
+                                doctype = DOCUMENT_TYPE_FACTURA;//!: Activar cuando tipo de documento venga de cliente
                                 prefix = 'FA-';
                             } else {
-                                doctype = DOCUMENT_TYPE_BOLETA;//TODO: Activar cuando tipo de documento venga de cliente
+                                doctype = DOCUMENT_TYPE_BOLETA;//!: Activar cuando tipo de documento venga de cliente
                                 prefix = 'BV-';
                             }
                         }
@@ -222,7 +222,7 @@ define(['N/log', 'N/search', 'N/record', 'N/runtime', 'N/redirect', 'N/url', 'N/
                         doctype = DOCUMENT_TYPE_CREDIT_MEMO;
                         prefix = 'NC-';
                     }
-                    objRecord.setValue({ fieldId: 'custbody_pe_document_type', value: doctype, ignoreFieldChange: true }); //TODO: Activar cuando tipo de documento venga de cliente
+                    objRecord.setValue({ fieldId: 'custbody_pe_document_type', value: doctype, ignoreFieldChange: true }); //!: Activar cuando tipo de documento venga de cliente
                     try {
                         let cashCsv = objRecord.getValue({ fieldId: 'custbody_pe_cash_sale_csv' });
                         log.debug('LOG-value-CSV', cashCsv);
