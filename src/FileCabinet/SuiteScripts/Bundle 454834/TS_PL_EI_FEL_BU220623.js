@@ -71,8 +71,7 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
                 } else {
                     request = createRequestCreditMemo(internalId, array);
                 }
-                log.debug('request',request);
-                log.debug('getcredentials',getcredentials);
+
                 //Bloque de validación si documento ya existe en OSCE
                 var existDocument = getDocumentPDF(getcredentials.username, getcredentials.password, request.typedoccode, request.serie, request.correlativo, tokenurl, urlgetinfourl, array);
                 sleep(1000);
@@ -1025,7 +1024,6 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
                     var item = openRecord.getSublistValue({ sublistId: 'item', fieldId: 'item', line: i });
                     var unit = getUnit(item);
                     var rate = parseFloat(openRecord.getSublistValue({ sublistId: 'item', fieldId: 'rate', line: i }));
-                    var rateopfree = rate;
                     //logStatus(documentid, rate);
                     var taxcode_display = openRecord.getSublistValue({ sublistId: 'item', fieldId: 'taxcode_display', line: i });
                     var amount = openRecord.getSublistValue({ sublistId: 'item', fieldId: 'amount', line: i });
@@ -1271,7 +1269,7 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
                                 precioVentaUnitario: precioVentaUnitario.toString(),
                                 totalImpuestos: jsonTotalImpuestos,
                                 valorVenta: amount.toFixed(2).toString(),
-                                valorRefOpOnerosas: rateopfree.toFixed(2).toString(),
+                                valorRefOpOnerosas: amount.toString(),
                                 montoTotalImpuestos: '0.00'
                             });
                         } else if (anydiscountline == 'any') {
@@ -1286,7 +1284,7 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
                                 cargoDescuento: jsonCargoDescuentoLines,
                                 totalImpuestos: jsonTotalImpuestos,
                                 valorVenta: amount.toFixed(2).toString(),
-                                montoTotalImpuestos: parseFloat(tax1amt).toFixed(2)
+                                montoTotalImpuestos: tax1amt.toFixed(2)
                             });
                         } else {
                             json.push({
@@ -3250,7 +3248,7 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
         function setRecord(recordtype, internalid, tranid, urlpdf, urlxml, urlcdr, urljson, encodepdf, array) {
             var recordload = '';
             try {
-/*                 if (recordtype != '') {
+                if (recordtype != '') {
                     try {
                         recordload = record.load({ type: record.Type.INVOICE, id: internalid, isDynamic: true })
                     } catch (error) {
@@ -3266,14 +3264,8 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
                 recordload.setValue('custbody_pe_ei_printed_cdr_res', urlcdr);
                 recordload.setValue('custbody_pe_ei_printed_pdf', urlpdf);
                 recordload.setValue('custbody_pe_ei_printed_pdf_codificado', encodepdf);
-                recordload.save(); */
-                recordload = record.create({type: 'customrecord_pe_ei_printed_fields',isDynamic: true});
-                recordload.setValue('name', tranid);
-                recordload.setValue('custrecord_pe_ei_printed_xml_req', urljson);
-                recordload.setValue('custrecord_pe_ei_printed_xml_res', urlxml);
-                recordload.setValue('custrecord_pe_ei_printed_pdf', urlpdf);
-                recordload.setValue('custrecord_pe_ei_printed_cdr_res', urlcdr);
                 recordload.save();
+
                 return 'Sent';
             } catch (e) {
                 logError(array[0], array[1], 'Error-setRecord', e.message);
