@@ -100,9 +100,9 @@ define(['N/currentRecord', 'N/search', 'N/ui/dialog'], (currentRecord, search, d
     const getExistCustomer = (document, recordType) => {
         let mySearch = '';
         if (recordType == CUSTOMER) {
-            mySearch = search.load({ id: 'customsearch_pe_customer_document_exist' }); //TODO PE - Customer Document Exist - PRODUCCION
+            mySearch = search.load({ id: 'customsearch_pe_customer_document_exist' }); //?PE - Customer Document Exist - PRODUCCION
         } else {
-            mySearch = search.load({ id: 'customsearch_pe_vendor_document_exist' }); //TODO PE - Vendor Document Exist - PRODUCCION
+            mySearch = search.load({ id: 'customsearch_pe_vendor_document_exist' }); //?PE - Vendor Document Exist - PRODUCCION
         }
 
         let filters = mySearch.filters;

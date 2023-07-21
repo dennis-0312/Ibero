@@ -13,7 +13,7 @@ Governance points: N/A
  *@NApiVersion 2.1
  *@NScriptType UserEventScript
  */
-define(['N/log', 'N/search', 'N/record', 'N/runtime', 'N/redirect', 'N/url', 'N/https'], (log, search, record, runtime, redirect, url, https) => {
+define(['N/log', 'N/search', 'N/record', 'N/runtime', 'N/redirect', 'N/url', 'N/https', 'N/ui/serverWidget'], (log, search, record, runtime, redirect, url, https, serverWidget) => {
     const INVOICE = 'invoice';
     const CASH_SALE = 'cashsale';
     const CREDIT_MEMO = 'creditmemo';
@@ -111,9 +111,10 @@ define(['N/log', 'N/search', 'N/record', 'N/runtime', 'N/redirect', 'N/url', 'N/
                     objRecord.setValue({ fieldId: 'custbody_pe_document_type_ref', value: document_type, ignoreFieldChange: true });
                     objRecord.setValue({ fieldId: 'custbody_pe_document_series_ref', value: serie, ignoreFieldChange: true });
                     objRecord.setValue({ fieldId: 'custbody_pe_document_number_ref', value: number, ignoreFieldChange: true });
-                    objRecord.setValue({ fieldId: 'custbody_pe_document_type', value: '', ignoreFieldChange: true });
+                    objRecord.setValue({ fieldId: 'custbody_pe_document_type', value: DOCUMENT_TYPE_CREDIT_MEMO, ignoreFieldChange: true });
                     objRecord.setValue({ fieldId: 'custbody_pe_serie', value: '', ignoreFieldChange: true });
                     objRecord.setValue({ fieldId: 'custbody_pe_number', value: '', ignoreFieldChange: true });
+                    
                 }
 
                 // else if (objRecord.type == CASH_SALE) {
@@ -129,6 +130,46 @@ define(['N/log', 'N/search', 'N/record', 'N/runtime', 'N/redirect', 'N/url', 'N/
             } catch (error) {
                 log.error('Error-beforeLoad-General', eventType + '--' + error);
             }
+        } else if (eventType === context.UserEventType.VIEW) {
+            const objRecord = context.newRecord;
+            const idRecord = objRecord.id;
+            var form = context.form;
+            var type = objRecord.type;
+            var tranID = objRecord.getValue('tranid').split('-');
+            tranID = tranID[1]+'-'+tranID[2];
+            log.debug('tranID',tranID); 
+            var idRecordDocument = getEIPrinted(tranID);
+            log.debug('idRecordDocument',idRecordDocument);
+            try {
+                if (type == CASH_SALE || type == CREDIT_MEMO) {
+                    form.addButton({
+                        id: 'custpage_ts_reimprimir',
+                        label: 'Reimprimir',
+                        functionName: 'reimprimir(' + idRecord + ',"' + type + '")'
+                    });
+                    form.clientScriptModulePath = './TS_CS_Reimprimir.js';
+                }
+                if((type == CASH_SALE || type == CREDIT_MEMO || type == INVOICE) && idRecordDocument){
+                    var customField = form.addField({
+                        id: 'custpage_custom_field',
+                        type: serverWidget.FieldType.TEXT,
+                        label: 'Documentos Electrónicos',
+                        //source: 'transaccion'
+                      });
+               
+                        //customField.defaultValue = idRecordDocument;
+                        var url = 'https://6785603.app.netsuite.com/app/common/custom/custrecordentry.nl?rectype=1395&id='+idRecordDocument; // Reemplaza con la URL deseada
+                        var html = '<a href="' + url + '">Ver Documentos Electrónicos</a>';
+
+                        // Establece la etiqueta HTML en el campo personalizado
+                        customField.defaultValue = html;
+
+                    
+                }
+            } catch (error) {
+                log.error('Error-beforeLoad-General', eventType + '--' + error);
+            }
+
         }
     }
 
@@ -157,7 +198,7 @@ define(['N/log', 'N/search', 'N/record', 'N/runtime', 'N/redirect', 'N/url', 'N/
                     objRecord.setValue({ fieldId: 'tranid', value: ref_no });
                 } else {
                     const customform = objRecord.getValue({ fieldId: 'customform' });
-                    const customer = objRecord.getValue({ fieldId: 'entity' }); //!: Activar cuando tipo de documento venga de cliente
+                    const customer = objRecord.getValue({ fieldId: 'entity' }); //?: Activar cuando tipo de documento venga de cliente
                     const location = objRecord.getValue({ fieldId: 'location' });
                     let total = String(objRecord.getValue({ fieldId: 'total' }));
                     if (objRecord.type == INVOICE) {
@@ -185,12 +226,12 @@ define(['N/log', 'N/search', 'N/record', 'N/runtime', 'N/redirect', 'N/url', 'N/
                             prefix = 'ND-';
                         } else {
                             let searchField = search.lookupFields({ type: search.Type.CUSTOMER, id: customer, columns: ['custentity_pe_document_type'] });
-                            if (searchField.custentity_pe_document_type[0].value == DOCUMENT_TYPE_RUC) {//!: Activar cuando tipo de documento venga de cliente
+                            if (searchField.custentity_pe_document_type[0].value == DOCUMENT_TYPE_RUC) {//?: Activar cuando tipo de documento venga de cliente
                                 // if (doctype == DOCUMENT_TYPE_FACTURA) { //*Activar cuando venga a demanda
-                                doctype = DOCUMENT_TYPE_FACTURA;//!: Activar cuando tipo de documento venga de cliente
+                                doctype = DOCUMENT_TYPE_FACTURA;//?: Activar cuando tipo de documento venga de cliente
                                 prefix = 'FA-';
                             } else {
-                                doctype = DOCUMENT_TYPE_BOLETA;//!: Activar cuando tipo de documento venga de cliente
+                                doctype = DOCUMENT_TYPE_BOLETA;//?: Activar cuando tipo de documento venga de cliente
                                 prefix = 'BV-';
                             }
                         }
@@ -217,12 +258,13 @@ define(['N/log', 'N/search', 'N/record', 'N/runtime', 'N/redirect', 'N/url', 'N/
                                 }
                             }
                         } catch (error) { }
+                        objRecord.setValue({ fieldId: 'custbody_pe_document_type', value: doctype, ignoreFieldChange: true }); //?: Activar cuando tipo de documento venga de cliente
+
                     } else if (objRecord.type == CREDIT_MEMO) {
                         documentref = objRecord.getValue({ fieldId: 'custbody_pe_document_type_ref' });
                         doctype = DOCUMENT_TYPE_CREDIT_MEMO;
                         prefix = 'NC-';
                     }
-                    objRecord.setValue({ fieldId: 'custbody_pe_document_type', value: doctype, ignoreFieldChange: true }); //!: Activar cuando tipo de documento venga de cliente
                     try {
                         let cashCsv = objRecord.getValue({ fieldId: 'custbody_pe_cash_sale_csv' });
                         log.debug('LOG-value-CSV', cashCsv);
@@ -276,6 +318,13 @@ define(['N/log', 'N/search', 'N/record', 'N/runtime', 'N/redirect', 'N/url', 'N/
                     }
                 } catch (error) { }
             }
+
+            /*
+            if (objRecord.type == CASH_SALE){
+                var columnObj = context.newRecord.getColumn('amount');
+                    columnObj.isDisabled = true;
+            }
+            */
         }
     }
 
@@ -379,6 +428,32 @@ define(['N/log', 'N/search', 'N/record', 'N/runtime', 'N/redirect', 'N/url', 'N/
         }
     }
 
+    const getEIPrinted = (tranid) => {
+        try {
+            var busqueda = search.create({
+                type: "customrecord_pe_ei_printed_fields",
+                filters:
+                [
+                   ["name","is",tranid]
+                ],
+                columns:
+                [
+                    search.createColumn({name: "internalid", label: "ID interno"})
+                 ]
+             });
+            var savedsearch = busqueda.run().getRange(0, 1);
+            var idInterno = '';
+            if (savedsearch.length > 0) {
+                busqueda.run().each(function (result) {
+                    idInterno = result.getValue(busqueda.columns[0]);
+                    return true;
+                });
+            }
+            return idInterno;
+        } catch (e) {
+            log.error('Error en getEIPrinted', e);
+        }
+    }
 
     const getSerie = (documenttype, location, prefix, documentref = 0) => {
         let searchLoad = '';
