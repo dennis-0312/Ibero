@@ -75,7 +75,7 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
                 log.debug('getcredentials',getcredentials);
                 //Bloque de validación si documento ya existe en OSCE
                 var existDocument = getDocumentPDF(getcredentials.username, getcredentials.password, request.typedoccode, request.serie, request.correlativo, tokenurl, urlgetinfourl, array);
-                sleep(1000);
+                timeOut(1000);
                 if (existDocument.codigo == '0') {
                     statustrasanction = '0';
                 } else {
@@ -3301,7 +3301,7 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
         }
 
 
-        function sleep(milliseconds) {
+        function timeOut(milliseconds) {
             var start = new Date().getTime();
             for (var i = 0; i < 1e7; i++) {
                 if ((new Date().getTime() - start) > milliseconds) {
@@ -3309,6 +3309,7 @@ define(["N/record", "N/file", "N/email", "N/encode", "N/search", "N/https", "N/l
                 }
             }
         }
+        timeOut(1000);
 
 
         function random() {
