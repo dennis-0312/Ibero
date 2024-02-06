@@ -1,4 +1,3 @@
-
 /********************************************************************************************************************************************************
 This script Stock Items
 /******************************************************************************************************************************************************** 
@@ -14,7 +13,7 @@ Governance points: N/A
  *@NApiVersion 2.1
  *@NScriptType ScheduledScript
  */
-define(['N/log', 'N/search', 'N/https', 'N/runtime'], (log, search, https, runtime) => {
+define(['N/log', 'N/search', 'N/https', 'N/runtime', 'N/file'], (log, search, https, runtime, file) => {
 
     const URL_STOCK = 'https://saas.getapolo.com/api/v1/products/stock/exec/task/iberolibrerias-products-stock@010578e0-32f0-49ab-a34b-c367678a9a6d';
     const ACCEPT = '*/*';
@@ -31,10 +30,10 @@ define(['N/log', 'N/search', 'N/https', 'N/runtime'], (log, search, https, runti
             if (action == 'fromcustom') {
                 let k = 0
                 let searchTransactions = search.load({ id: 'customsearch_pe_item_stock_updated_trans' }); //PE - Item Stock Updated Search Transaction - PRODUCCION
+                //let searchTransactions = search.load({ id: 'customsearch_pe_item_stock_updated_tra_2' }); //PE - Item Stock Updated Search Transaction - DEVELOPER
                 var searchResultCountTran = searchTransactions.runPaged().count;
                 if (searchResultCountTran != 0) {
                     if (searchResultCountTran <= 4000) {
-
                         searchTransactions.run().each((result) => {
                             let limit = runtime.getCurrentScript().getRemainingUsage(); //! 10 Governance points
                             //log.debug('Limit', limit);
@@ -60,10 +59,12 @@ define(['N/log', 'N/search', 'N/https', 'N/runtime'], (log, search, https, runti
                         log.debug('JSON', json);
                         for (let j in json) {
                             let searchLoad = search.load({ id: 'customsearch_ib_location_ecommerce_updat' }); //PE - Item Stock Updated - PRODUCCION
+                            //let searchLoad = search.load({ id: 'customsearch_ib_location_ecommerce_upd_2' }); //PE - Item Stock Updated - DEVELOPER
                             let filters = searchLoad.filters;
                             const filterOne = search.createFilter({ name: 'inventorylocation', operator: search.Operator.ANYOF, values: json[j].internalid });
                             filters.push(filterOne);
                             const searchResultCount = searchLoad.runPaged().count;
+                            log.debug('Count', searchResultCount);
                             if (searchResultCount != 0) {
                                 const searchResult = searchLoad.run().getRange({ start: 0, end: 1000 });
                                 for (let i in searchResult) {
@@ -71,6 +72,7 @@ define(['N/log', 'N/search', 'N/https', 'N/runtime'], (log, search, https, runti
                                     let stock = parseInt(searchResult[i].getValue(searchLoad.columns[4]));
                                     stock = isNaN(stock) == true ? 0 : stock;
                                     const location = searchResult[i].getValue(searchLoad.columns[3]);
+                                    //log.debug('jsonRequest', 'sku : ' + sku + ', stock_quantity: '+ stock + ', warehouse_id: ' + location);
                                     jsonRequest.push({
                                         "sku": sku,
                                         "stock_quantity": stock,
@@ -80,7 +82,8 @@ define(['N/log', 'N/search', 'N/https', 'N/runtime'], (log, search, https, runti
                             }
                         }
                         let body = JSON.stringify(jsonRequest);
-                        log.debug('Request', body);
+                        //log.debug('Request', body);
+                        createFile(body);
                         executeStockWS(body);
                     }
                 }
@@ -159,7 +162,8 @@ define(['N/log', 'N/search', 'N/https', 'N/runtime'], (log, search, https, runti
                             }
                         }
                         let body = JSON.stringify(jsonRequest);
-                        log.debug('Request', body);
+                        //log.debug('Request', body);
+                        createFile(body);
                         executeStockWS(body);
                     }
                 }
@@ -195,6 +199,21 @@ define(['N/log', 'N/search', 'N/https', 'N/runtime'], (log, search, https, runti
             'hourFrom': parseInt(hourFrom),
             'hourTo': parseInt(hourTo)
         }
+    }
+
+    const createFile = (body) => {
+        let fecha = new Date();
+        let fileObj = file.create({
+            name: fecha + '.json',
+            fileType: file.Type.JSON,
+            contents: body,
+            description: 'Pruebas de integración VTEX',
+            encoding: file.Encoding.UTF8,
+            isOnline: true
+        });
+        fileObj.folder = 920905;
+        let fileId = fileObj.save();
+        log.debug('FileID', fileId);
     }
 
     return {
