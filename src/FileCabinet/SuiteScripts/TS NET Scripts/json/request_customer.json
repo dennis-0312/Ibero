@@ -1,0 +1,69 @@
+[
+    {
+        "isperson": "T",
+        "parent": "",
+        "lastname": "apellidoTest01",
+        "firstname": "nombreTest01",
+        "vatregnumber": "12345678",
+        "email": "correo01@gmail.com",
+        "phone": "123456789",
+        "principalsubsidiary": "1",
+        "custentity_pe_document_type": "4",
+        "custentity_pe_type_of_person": "1",
+        "addressBook": {
+            "items": [
+                {
+                    "defaultbilling": true,
+                    "defaultshipping": true,
+                    "addressBookAddress": {
+                        "addr1": "calle principal",
+                        "addr2": "oficina 103",
+                        "addr3": "San Isidro",
+                        "city": "Lima",
+                        "state": "Lima",
+                        "country": "PE"
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "id": 4955,
+        "success": 1
+    },
+    {
+        "id": 4955,
+        "action": "delete"
+    },
+    {
+        "id": 532,
+        "action": "update",
+        "body": {
+            "isperson": "F",
+            "parent": "",
+            "companyname": "Market Test 01",
+            "vatregnumber": "123456789123",
+            "email": "correo01up@gmail.com",
+            "phone": "123456789",
+            "principalsubsidiary": "1",
+            "custentity_pe_document_type": "4",
+            "custentity_pe_type_of_person": "1",
+            "addressBook": {
+                "items": [
+                    {
+                        "defaultbilling": true,
+                        "defaultshipping": true,
+                        "addressBookAddress": {
+                            "addr1": "calle principal",
+                            "addr2": "oficina 103",
+                            "addr3": "San Isidro UP",
+                            "city": "Lima",
+                            "state": "Lima",
+                            "country": "PE"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+]

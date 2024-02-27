@@ -1,0 +1,973 @@
+[
+    {
+        "customerid": 15087,
+        "date": "2022/05/02",
+        "op": "SO-00000587-2021",
+        "nota": "",
+        "salesrep": "5658",
+        "department": "1",
+        "class": "1",
+        "location": "1",
+        "shipdate": "2022/05/02",
+        "terms": "5",
+        "paymentmethod": "1",
+        "items": [
+            {
+                "itemid": 21,
+                "description": "Producto 21",
+                "quantity": "2",
+                "units": "31",
+                "pricelevel": "1",
+                "rate": "5.76271",
+                "amount": "11.52542",
+                "taxcode": "1",
+                "tax1amt": "2.07458",
+                "grossamt": "13.6"
+            },
+            {
+                "itemid": 1343,
+                "description": "Producto 1343",
+                "quantity": "1",
+                "units": "35",
+                "pricelevel": "-1",
+                "rate": "8.47",
+                "amount": "8.47",
+                "tipoigv": "1",
+                "tax1amt": "1.53",
+                "grossamt": "10"
+            },
+            {
+                "itemid": -2,
+                "description": "Linea Subtotal",
+                "quantity": "",
+                "units": "",
+                "pricelevel": "",
+                "rate": "",
+                "amount": "20.00",
+                "tipoigv": "",
+                "tax1amt": "3.60",
+                "grossamt": "23.60"
+            },
+            {
+                "itemid": 122,
+                "description": "Línea descuento total",
+                "quantity": "",
+                "units": "",
+                "pricelevel": "1",
+                "rate": "-1.00",
+                "amount": "",
+                "tipoigv": "1",
+                "tax1amt": "-0.18",
+                "grossamt": "-1.18"
+            }
+        ]
+    },
+    {
+        "id": 30024,
+        "time": 13670
+    },
+    {
+        "customerid": 510,
+        "date": "2022/05/03",
+        "op": "VTEX-00000003-2022",
+        "nota": "Test",
+        "salesrep": "",
+        "department": "2",
+        "class": "20",
+        "location": "10",
+        "shipdate": "2022/05/03",
+        "terms": "4",
+        "paymentmethod": "14",
+        "status": "pagada",
+        "items": [
+            {
+                "itemid": 237,
+                "quantity": "1",
+                "units": "1",
+                "pricelevel": "-1",
+                "rate": "10",
+                "amount": "10",
+                "taxcode": "6",
+                "tax1amt": "1.80",
+                "grossamt": "11.80"
+            },
+            {
+                "itemid": 241,
+                "quantity": "2",
+                "units": "1",
+                "pricelevel": "-1",
+                "rate": "8.5896",
+                "amount": "17.1792",
+                "taxcode": "6",
+                "tax1amt": "3.092256",
+                "grossamt": "20.271456"
+            },
+            {
+                "itemid": -2,
+                "quantity": "",
+                "units": "",
+                "pricelevel": "",
+                "rate": "",
+                "amount": "27.1792",
+                "taxcode": "",
+                "tax1amt": "4.892256",
+                "grossamt": "32.071456"
+            },
+            {
+                "itemid": 122,
+                "quantity": "",
+                "units": "",
+                "pricelevel": "1",
+                "rate": "-1.00",
+                "amount": "",
+                "taxcode": "6",
+                "tax1amt": "-0.18",
+                "grossamt": "-1.18"
+            }
+        ]
+    },
+    "OV - TRAMA GENERAL",
+    {
+        "customerid": 635,
+        "date": "2022/05/09",
+        "op": "VTEX-00000015",
+        "nota": "Test",
+        "salesrep": "",
+        "department": "2",
+        "class": "20",
+        "location": "10",
+        "shipdate": "2022/05/09",
+        "terms": "4",
+        "paymentmethod": "14",
+        "status": "pagada",
+        "transactiontype": "103",
+        "documentnumber": "20295754444",
+        "shipmethod": "337",
+        "store": "10",
+        "receiver": "Jaime Sanchez",
+        "couponcode": "c548596",
+        "addressBook": {
+            "items": [
+                {
+                    "defaultbilling": true,
+                    "defaultshipping": true,
+                    "addressBookAddress": {
+                        "addr1": "San Isidro",
+                        "addr2": "oficina 103",
+                        "addr3": "cuadra 2",
+                        "city": "Lima",
+                        "state": "Lima",
+                        "country": "PE"
+                    }
+                }
+            ]
+        },
+        "items": [
+            {
+                "sku": "CSG0001",
+                "quantity": "10",
+                "units": "1",
+                "pricelevel": "",
+                "rate": "10",
+                "amount": "100",
+                "taxcode": "6",
+                "tax1amt": "18",
+                "grossamt": "118"
+            },
+            {
+                "sku": "CSG0002",
+                "quantity": "2",
+                "units": "1",
+                "pricelevel": "",
+                "rate": "11",
+                "amount": "220",
+                "taxcode": "6",
+                "tax1amt": "39.60",
+                "grossamt": "259.60"
+            },
+            {
+                "sku": -2,
+                "quantity": "",
+                "units": "",
+                "pricelevel": "",
+                "rate": "",
+                "amount": "320",
+                "taxcode": "6",
+                "tax1amt": "57.60",
+                "grossamt": "377.60"
+            },
+            {
+                "sku": "DSCTO0001",
+                "quantity": "",
+                "units": "",
+                "pricelevel": "-1",
+                "rate": "-16.00",
+                "amount": "-16.00",
+                "taxcode": "6",
+                "tax1amt": "-2.88",
+                "grossamt": "-18.88"
+            }
+        ]
+    },
+    "Orden de venta - Boleta, con descuento, Lima",
+    {
+        "customerid": 635,
+        "date": "2022/05/09",
+        "op": "VTEX-00000015",
+        "nota": "Test",
+        "salesrep": "",
+        "department": "2",
+        "class": "20",
+        "location": "10",
+        "shipdate": "2022/05/09",
+        "terms": "4",
+        "paymentmethod": "14",
+        "status": "pagada",
+        "transactiontype": "101",
+        "documentnumber": "12345678",
+        "deliverymethod": "337",
+        "receiver": "Jaime Sanchez",
+        "addressBook": {
+            "items": [
+                {
+                    "defaultbilling": true,
+                    "defaultshipping": true,
+                    "addressBookAddress": {
+                        "addr1": "San Isidro",
+                        "addr2": "oficina 103",
+                        "addr3": "cuadra 2",
+                        "city": "Lima",
+                        "state": "Lima",
+                        "country": "PE"
+                    }
+                }
+            ]
+        },
+        "items": [
+            {
+                "sku": "CSG0001",
+                "quantity": "10",
+                "units": "1",
+                "description": "ANTOLOGÍA DE RELATOS DETECTIVES",
+                "pricelevel": "",
+                "rate": "10",
+                "amount": "100",
+                "taxcode": "6",
+                "tax1amt": "18",
+                "grossamt": "118"
+            },
+            {
+                "sku": "CSG0002",
+                "quantity": "2",
+                "units": "1",
+                "description": "HERREROS Y ALQUIMISTAS",
+                "pricelevel": "",
+                "rate": "11",
+                "amount": "22",
+                "taxcode": "6",
+                "tax1amt": "3.96",
+                "grossamt": "25.96"
+            },
+            {
+                "sku": -2,
+                "quantity": "",
+                "units": "",
+                "description": "Subtotal",
+                "pricelevel": "",
+                "rate": "",
+                "amount": "122",
+                "taxcode": "6",
+                "tax1amt": "21.96",
+                "grossamt": "143.96"
+            },
+            {
+                "sku": "DSCTO0001",
+                "quantity": "",
+                "units": "",
+                "description": "Promoción - 5% de descuento, dscto global",
+                "pricelevel": "-1",
+                "rate": "-16.00",
+                "amount": "-16.00",
+                "taxcode": "6",
+                "tax1amt": "-2.88",
+                "grossamt": "-18.88"
+            }
+        ]
+    },
+    "Orden de venta - Factura, sin oferta, Lima",
+    {
+        "customerid": 635,
+        "date": "2022/05/09",
+        "op": "VTEX-00000015",
+        "nota": "Test",
+        "salesrep": "",
+        "department": "2",
+        "class": "20",
+        "location": "10",
+        "shipdate": "2022/05/09",
+        "terms": "4",
+        "paymentmethod": "14",
+        "status": "pagada",
+        "transactiontype": "103",
+        "documentnumber": "20295754444",
+        "deliverymethod": "337",
+        "receiver": "Jaime Sanchez",
+        "addressBook": {
+            "items": [
+                {
+                    "defaultbilling": true,
+                    "defaultshipping": true,
+                    "addressBookAddress": {
+                        "addr1": "San Isidro",
+                        "addr2": "oficina 103",
+                        "addr3": "cuadra 2",
+                        "city": "Lima",
+                        "state": "Lima",
+                        "country": "PE"
+                    }
+                }
+            ]
+        },
+        "items": [
+            {
+                "sku": "CSG0001",
+                "quantity": "10",
+                "units": "1",
+                "description": "ANTOLOGÍA DE RELATOS DETECTIVES (CLÁSICOS ILUSTRADOS)",
+                "pricelevel": "",
+                "rate": "10",
+                "amount": "100",
+                "taxcode": "6",
+                "tax1amt": "18",
+                "grossamt": "118"
+            }
+        ]
+    },
+    "Orden de venta - Boleta, recojo en tienda, sin oferta, 2 unidades",
+    {
+        "customerid": 635,
+        "date": "2022/05/09",
+        "op": "VTEX-00000015",
+        "nota": "Test",
+        "salesrep": "",
+        "department": "2",
+        "class": "20",
+        "location": "10",
+        "shipdate": "2022/05/09",
+        "terms": "4",
+        "paymentmethod": "14",
+        "status": "pagada",
+        "transactiontype": "101",
+        "documentnumber": "12345678",
+        "deliverymethod": "338",
+        "store": "10",
+        "items": [
+            {
+                "sku": "CSG0002",
+                "quantity": "2",
+                "units": "1",
+                "description": "HERREROS Y ALQUIMISTAS",
+                "pricelevel": "",
+                "rate": "11",
+                "amount": "22",
+                "taxcode": "6",
+                "tax1amt": "3.96",
+                "grossamt": "25.96"
+            }
+        ]
+    },
+    "Orden de venta - Factura, con precio normal, con 2 unidades",
+    {
+        "customerid": 635,
+        "date": "2022/05/09",
+        "op": "VTEX-00000015",
+        "nota": "Test",
+        "salesrep": "",
+        "department": "2",
+        "class": "20",
+        "location": "10",
+        "shipdate": "2022/05/09",
+        "terms": "4",
+        "paymentmethod": "14",
+        "status": "pagada",
+        "transactiontype": "103",
+        "documentnumber": "20295754444",
+        "deliverymethod": "337",
+        "receiver": "Jaime Sanchez",
+        "addressBook": {
+            "items": [
+                {
+                    "defaultbilling": true,
+                    "defaultshipping": true,
+                    "addressBookAddress": {
+                        "addr1": "San Isidro",
+                        "addr2": "oficina 103",
+                        "addr3": "cuadra 2",
+                        "city": "Lima",
+                        "state": "Lima",
+                        "country": "PE"
+                    }
+                }
+            ]
+        },
+        "items": [
+            {
+                "sku": "CSG0002",
+                "quantity": "2",
+                "units": "1",
+                "description": "HERREROS Y ALQUIMISTAS",
+                "pricelevel": "",
+                "rate": "11",
+                "amount": "22",
+                "taxcode": "6",
+                "tax1amt": "3.96",
+                "grossamt": "25.96"
+            }
+        ]
+    },
+    "Orden de venta - Boleta, sin oferta, con varias unidades, Provincia",
+    {
+        "customerid": 635,
+        "date": "2022/05/09",
+        "op": "VTEX-00000015",
+        "nota": "Test",
+        "salesrep": "",
+        "department": "2",
+        "class": "20",
+        "location": "10",
+        "shipdate": "2022/05/09",
+        "terms": "4",
+        "paymentmethod": "14",
+        "status": "pagada",
+        "transactiontype": "101",
+        "documentnumber": "12345678",
+        "deliverymethod": "337",
+        "receiver": "Alicia Gutierrez",
+        "addressBook": {
+            "items": [
+                {
+                    "defaultbilling": true,
+                    "defaultshipping": true,
+                    "addressBookAddress": {
+                        "addr1": "Plaza Huamanmarca",
+                        "addr2": "Calle Real #800",
+                        "addr3": "cuadra 1",
+                        "city": "Huancayo",
+                        "state": "Junín",
+                        "country": "PE"
+                    }
+                }
+            ]
+        },
+        "items": [
+            {
+                "sku": "CSG0001",
+                "quantity": "10",
+                "units": "1",
+                "description": "ANTOLOGÍA DE RELATOS DETECTIVES (CLÁSICOS ILUSTRADOS)",
+                "pricelevel": "-1",
+                "rate": "10",
+                "amount": "100",
+                "taxcode": "6",
+                "tax1amt": "18",
+                "grossamt": "118"
+            },
+            {
+                "sku": "CSG0002",
+                "quantity": "2",
+                "units": "1",
+                "description": "HERREROS Y ALQUIMISTAS",
+                "pricelevel": "-1",
+                "rate": "11",
+                "amount": "22",
+                "taxcode": "6",
+                "tax1amt": "3.96",
+                "grossamt": "25.96"
+            }
+        ]
+    },
+    "Orden de venta - Boleta, promoción 2x1, Lima, con delivery",
+    {
+        "customerid": 510,
+        "date": "2022/05/12",
+        "op": "VTEX-00000015",
+        "nota": "Test",
+        "salesrep": "",
+        "department": "2",
+        "class": "20",
+        "location": "10",
+        "shipdate": "2022/05/12",
+        "terms": "4",
+        "paymentmethod": "14",
+        "status": "pagada",
+        "transactiontype": "101",
+        "documentnumber": "12345678",
+        "deliverymethod": "337",
+        "receiver": "Jaime Sanchez",
+        "addressBook": {
+            "items": [
+                {
+                    "defaultbilling": true,
+                    "defaultshipping": true,
+                    "addressBookAddress": {
+                        "addr1": "San Borja",
+                        "addr2": "oficina 103",
+                        "addr3": "cuadra 2",
+                        "city": "Lima",
+                        "state": "Lima",
+                        "country": "PE"
+                    }
+                }
+            ]
+        },
+        "items": [
+            {
+                "sku": "AAJ10008",
+                "quantity": "1",
+                "units": "1",
+                "description": "BOAT NK BOX TOP M NEGRO A781",
+                "pricelevel": "",
+                "rate": "29.66",
+                "amount": "29.66",
+                "taxcode": "6",
+                "tax1amt": "5.34",
+                "grossamt": "35"
+            },
+            {
+                "sku": "CSG0001",
+                "quantity": "1",
+                "units": "1",
+                "description": "ANTOLOGÍA DE RELATOS DETECTIVES (CLÁSICOS ILUSTRADOS)",
+                "pricelevel": "",
+                "rate": "11",
+                "amount": "11",
+                "taxcode": "6",
+                "tax1amt": "1.98",
+                "grossamt": "12.98"
+            },
+            {
+                "sku": "DSCTO0001",
+                "quantity": "",
+                "units": "",
+                "description": "Promoción 2x1 - descuento del 100%",
+                "pricelevel": "-1",
+                "rate": "-11.00",
+                "amount": "-11.00",
+                "taxcode": "6",
+                "tax1amt": "-1.98",
+                "grossamt": "-12.98"
+            },
+            {
+                "sku": "SVDELIVERY0001",
+                "quantity": "1",
+                "units": "2",
+                "description": "Servicio de delivery",
+                "pricelevel": "-1",
+                "rate": "10.00",
+                "amount": "10.00",
+                "taxcode": "6",
+                "tax1amt": "1.80",
+                "grossamt": "11.80"
+            }
+        ]
+    },
+    "Orden de venta - Boleta, con precio oferta por promoción, Lima",
+    {
+        "customerid": 635,
+        "date": "2022/05/09",
+        "op": "VTEX-00000015",
+        "nota": "Test",
+        "salesrep": "",
+        "department": "2",
+        "class": "20",
+        "location": "10",
+        "shipdate": "2022/05/09",
+        "terms": "4",
+        "paymentmethod": "14",
+        "status": "pagada",
+        "transactiontype": "101",
+        "documentnumber": "12345678",
+        "shipmethod": "337",
+        "receiver": "Jaime Sanchez",
+        "addressBook": {
+            "items": [
+                {
+                    "defaultbilling": true,
+                    "defaultshipping": true,
+                    "addressBookAddress": {
+                        "addr1": "San Isidro",
+                        "addr2": "oficina 103",
+                        "addr3": "cuadra 2",
+                        "city": "Lima",
+                        "state": "Lima",
+                        "country": "PE"
+                    }
+                }
+            ]
+        },
+        "items": [
+            {
+                "sku": "CSG0001",
+                "quantity": "10",
+                "units": "1",
+                "description": "ANTOLOGÍA DE RELATOS DETECTIVES (CLÁSICOS ILUSTRADOS)",
+                "pricelevel": "",
+                "rate": "10",
+                "amount": "100",
+                "taxcode": "6",
+                "tax1amt": "18",
+                "grossamt": "118"
+            },
+            {
+                "sku": "DSCTO0001",
+                "quantity": "",
+                "units": "",
+                "description": "Promoción - 15% de descuento, descuento por línea",
+                "pricelevel": "-1",
+                "rate": "-15.00",
+                "amount": "-15.00",
+                "taxcode": "6",
+                "tax1amt": "-2.70",
+                "grossamt": "-17.70"
+            }
+        ]
+    },
+    "Orden de venta - Boleta, con precio normal, con precio oferta",
+    {
+        "customerid": 635,
+        "date": "2022/05/09",
+        "op": "VTEX-00000015",
+        "nota": "Test",
+        "salesrep": "",
+        "department": "2",
+        "class": "20",
+        "location": "10",
+        "shipdate": "2022/05/09",
+        "terms": "4",
+        "paymentmethod": "14",
+        "status": "pagada",
+        "transactiontype": "101",
+        "documentnumber": "12345678",
+        "shipmethod": "337",
+        "receiver": "Jaime Sanchez",
+        "addressBook": {
+            "items": [
+                {
+                    "defaultbilling": true,
+                    "defaultshipping": true,
+                    "addressBookAddress": {
+                        "addr1": "San Isidro",
+                        "addr2": "oficina 103",
+                        "addr3": "cuadra 2",
+                        "city": "Lima",
+                        "state": "Lima",
+                        "country": "PE"
+                    }
+                }
+            ]
+        },
+        "items": [
+            {
+                "sku": "CSG0001",
+                "quantity": "1",
+                "units": "1",
+                "description": "ANTOLOGÍA DE RELATOS DETECTIVES",
+                "pricelevel": "",
+                "rate": "11",
+                "amount": "11",
+                "taxcode": "6",
+                "tax1amt": "1.98",
+                "grossamt": "12.98"
+            },
+            {
+                "sku": "DSCTO0001",
+                "quantity": "",
+                "units": "",
+                "description": "Promoción - 15% de descuento, dscto x línea",
+                "pricelevel": "-1",
+                "rate": "-1.65",
+                "amount": "-1.65",
+                "taxcode": "6",
+                "tax1amt": "-0.3",
+                "grossamt": "-1.95"
+            },
+            {
+                "sku": "CSG0002",
+                "quantity": "1",
+                "units": "1",
+                "description": "HERREROS Y ALQUIMISTAS",
+                "pricelevel": "",
+                "rate": "15",
+                "amount": "15",
+                "taxcode": "6",
+                "tax1amt": "2.70",
+                "grossamt": "17.70"
+            }
+        ]
+    },
+    "Orden de venta - Boleta, promoción 3x2, Lima",
+    {
+        "customerid": 635,
+        "date": "2022/05/12",
+        "op": "VTEX-00000015",
+        "nota": "Test",
+        "salesrep": "",
+        "department": "2",
+        "class": "20",
+        "location": "10",
+        "shipdate": "2022/05/12",
+        "terms": "4",
+        "paymentmethod": "14",
+        "status": "pagada",
+        "transactiontype": "101",
+        "documentnumber": "12345678",
+        "deliverymethod": "337",
+        "receiver": "Jaime Sanchez",
+        "addressBook": {
+            "items": [
+                {
+                    "defaultbilling": true,
+                    "defaultshipping": true,
+                    "addressBookAddress": {
+                        "addr1": "San Borja",
+                        "addr2": "oficina 103",
+                        "addr3": "cuadra 2",
+                        "city": "Lima",
+                        "state": "Lima",
+                        "country": "PE"
+                    }
+                }
+            ]
+        },
+        "items": [
+            {
+                "sku": "AAJ10008",
+                "quantity": "1",
+                "units": "1",
+                "description": "BOAT NK BOX TOP M NEGRO A781",
+                "pricelevel": "",
+                "rate": "29.66",
+                "amount": "29.66",
+                "taxcode": "6",
+                "tax1amt": "5.34",
+                "grossamt": "35"
+            },
+            {
+                "sku": "CSG0002",
+                "quantity": "1",
+                "units": "1",
+                "description": "HERREROS Y ALQUIMISTAS",
+                "pricelevel": "",
+                "rate": "15",
+                "amount": "15",
+                "taxcode": "6",
+                "tax1amt": "2.70",
+                "grossamt": "17.70"
+            },
+            {
+                "sku": "CSG0001",
+                "quantity": "1",
+                "units": "1",
+                "description": "ANTOLOGÍA DE RELATOS DETECTIVES",
+                "pricelevel": "",
+                "rate": "11",
+                "amount": "11",
+                "taxcode": "6",
+                "tax1amt": "1.98",
+                "grossamt": "12.98"
+            },
+            {
+                "sku": "DSCTO0001",
+                "quantity": "",
+                "units": "",
+                "description": "Promoción 3x2 - descuento del 100%",
+                "pricelevel": "-1",
+                "rate": "-11.00",
+                "amount": "-11.00",
+                "taxcode": "6",
+                "tax1amt": "-1.98",
+                "grossamt": "-12.98"
+            }
+        ]
+    },
+    "Orden de venta - Boleta, con cupón envío gratis, con artículos GRAVADOS y EXENTO",
+    {
+        "customerid": 635,
+        "date": "2022/05/12",
+        "op": "VTEX-00000015",
+        "nota": "Test",
+        "salesrep": "",
+        "department": "2",
+        "class": "20",
+        "location": "10",
+        "shipdate": "2022/05/12",
+        "terms": "4",
+        "paymentmethod": "14",
+        "status": "pagada",
+        "transactiontype": "101",
+        "documentnumber": "12345678",
+        "deliverymethod": "337",
+        "receiver": "Isabel Peña",
+        "couponcode": "c548596",
+        "addressBook": {
+            "items": [
+                {
+                    "defaultbilling": true,
+                    "defaultshipping": true,
+                    "addressBookAddress": {
+                        "addr1": "San Borja",
+                        "addr2": "oficina 103",
+                        "addr3": "cuadra 2",
+                        "city": "Lima",
+                        "state": "Lima",
+                        "country": "PE"
+                    }
+                }
+            ]
+        },
+        "items": [
+            {
+                "sku": "AAJ10008",
+                "quantity": "1",
+                "units": "1",
+                "description": "BOAT NK BOX TOP M NEGRO A781 - GRAVADO",
+                "pricelevel": "",
+                "rate": "29.66",
+                "amount": "29.66",
+                "taxcode": "6",
+                "tax1amt": "5.34",
+                "grossamt": "35"
+            },
+            {
+                "sku": "9780061247729",
+                "quantity": "1",
+                "units": "1",
+                "description": "BISCUIT FINDS A FRIEND BOOK AND CD - EXENTO",
+                "pricelevel": "",
+                "rate": "25.9685",
+                "amount": "25.9685",
+                "taxcode": "7",
+                "tax1amt": "0.00",
+                "grossamt": "25.9685"
+            },
+            {
+                "sku": "SVDELIVERY0001",
+                "quantity": "1",
+                "units": "2",
+                "description": "Servicio de delivery",
+                "pricelevel": "-1",
+                "rate": "10.00",
+                "amount": "10.00",
+                "taxcode": "6",
+                "tax1amt": "1.80",
+                "grossamt": "11.80"
+            },
+            {
+                "sku": "DSCTO0001",
+                "quantity": "",
+                "units": "",
+                "description": "Cupón envío gratis",
+                "pricelevel": "-1",
+                "rate": "-10.00",
+                "amount": "-10.00",
+                "taxcode": "6",
+                "tax1amt": "-1.80",
+                "grossamt": "-11.80"
+            }
+        ]
+    },
+    "Last Test",
+    {
+        "customerid": 510,
+        "date": "2022/05/31",
+        "op": "VTEX-00000015",
+        "nota": "Test",
+        "salesrep": "",
+        "department": "2",
+        "class": "26",
+        "location": "14",
+        "shipdate": "2022/05/31",
+        "terms": "4",
+        "paymentmethod": "14",
+        "status": "Pagado",
+        "transactiontype": "101",
+        "documentnumber": "12345678",
+        "deliverymethod": "338",
+        "store": "14",
+        "items": [
+            {
+                "sku": "344404",
+                "quantity": "1",
+                "units": "1",
+                "description": "Comics y mangas",
+                "pricelevel": "",
+                "rate": "29.02",
+                "amount": "29.02",
+                "taxcode": "7",
+                "tax1amt": "0.0",
+                "grossamt": "29.02"
+            }
+        ]
+    },
+    "Last Test 2",
+    {
+        "customerid": 510,
+        "date": "2022/05/31",
+        "op": "VTEX-00000015",
+        "nota": "Test",
+        "salesrep": "",
+        "department": "2",
+        "class": "26",
+        "location": "14",
+        "shipdate": "2022/05/31",
+        "terms": "4",
+        "paymentmethod": "14",
+        "status": "Pagado",
+        "transactiontype": "103",
+        "documentnumber": "20295754444",
+        "deliverymethod": "337",
+        "receiver": "Jaime Sanchez",
+        "addressBook": {
+            "items": [
+                {
+                    "defaultbilling": true,
+                    "defaultshipping": true,
+                    "addressBookAddress": {
+                        "addr1": "San Isidro",
+                        "addr2": "oficina 103",
+                        "addr3": "cuadra 2",
+                        "city": "Lima",
+                        "state": "Lima",
+                        "country": "PE"
+                    }
+                }
+            ]
+        },
+        "items": [
+            {
+                "sku": "344404",
+                "quantity": "1",
+                "units": "1",
+                "description": "Comics y mangas",
+                "pricelevel": "",
+                "rate": "29.02",
+                "amount": "29.02",
+                "taxcode": "7",
+                "tax1amt": "0.0",
+                "grossamt": "29.02"
+            },
+            {
+                "sku": "DSCTOL001",
+                "quantity": "",
+                "units": "",
+                "description": "Cupón envío gratis",
+                "pricelevel": "-1",
+                "rate": "-10.00",
+                "amount": "-10.00",
+                "taxcode": "7",
+                "tax1amt": "0.0",
+                "grossamt": "-10.00"
+            }
+        ]
+    }
+]

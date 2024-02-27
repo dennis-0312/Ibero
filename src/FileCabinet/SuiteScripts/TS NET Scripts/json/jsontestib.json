@@ -1,0 +1,128 @@
+{
+    "boleta": {
+        "IDE": {
+            "numeracion": "B017-00000190",
+            "fechaEmision": "2023-1-11",
+            "horaEmision": "20:57:00",
+            "codTipoDocumento": "03",
+            "tipoMoneda": "PEN",
+            "numeroOrdenCompra": "",
+            "fechaVencimiento": ""
+        },
+        "EMI": {
+            "tipoDocId": "6",
+            "numeroDocId": "20295754444",
+            "nombreComercial": "",
+            "razonSocial": "IBERO A. & G. S.A.C.",
+            "direccion": "AV. OSCAR R. BENAVIDES ",
+            "departamento": "Lima",
+            "provincia": "",
+            "distrito": "",
+            "codigoPais": "",
+            "telefono": "+51 987 113 775",
+            "correoElectronico": "jcoronado_asc@myevol.biz",
+            "codigoAsigSUNAT": "0000"
+        },
+        "REC": {
+            "tipoDocId": "1",
+            "numeroDocId": "99999999",
+            "razonSocial": "Cliente-Varios",
+            "direccion": "Lima Lima",
+            "departamento": "Lima",
+            "provincia": "",
+            "distrito": "",
+            "codigoPais": "PE",
+            "telefono": "",
+            "correoElectronico": ""
+        },
+        "DRF": [],
+        "CAB": {
+            "inafectas": {
+                "codigo": "1002",
+                "totalVentas": 1
+            },
+            "exoneradas": {
+                "codigo": "1003",
+                "totalVentas": "50.00"
+            },
+            "totalImpuestos": [
+                {
+                    "idImpuesto": "9998",
+                    "montoImpuesto": "0.00"
+                },
+                {
+                    "idImpuesto": "9997",
+                    "montoImpuesto": "0.00"
+                },
+                {
+                    "idImpuesto": "7152",
+                    "montoImpuesto": "1.00"
+                }
+            ],
+            "importeTotal": "51.00",
+            "tipoOperacion": "0101",
+            "leyenda": [
+                {
+                    "codigo": "1000",
+                    "descripcion": "CINCUENTA Y UN SOLES "
+                }
+            ],
+            "montoTotalImpuestos": "1.00"
+        },
+        "DET": [
+            {
+                "numeroItem": "1",
+                "codigoProducto": "9786075283333P6",
+                "descripcionProducto": "SAILOR MOON N.12",
+                "cantidadItems": "1",
+                "unidad": "NIU",
+                "valorUnitario": "50",
+                "precioVentaUnitario": "50",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "9997",
+                        "montoImpuesto": "0.00",
+                        "tipoAfectacion": "20",
+                        "montoBase": "50",
+                        "porcentaje": "0"
+                    }
+                ],
+                "valorVenta": "50",
+                "montoTotalImpuestos": "0"
+            },
+            {
+                "numeroItem": "2",
+                "codigoProducto": "Bolsas",
+                "descripcionProducto": "Bolsas de Plasticos",
+                "cantidadItems": "2",
+                "unidad": "NIU",
+                "valorUnitario": "0.5",
+                "precioVentaUnitario": "0.5",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "9998",
+                        "montoImpuesto": "0.00",
+                        "tipoAfectacion": "30",
+                        "montoBase": "1",
+                        "porcentaje": "0"
+                    },
+                    {
+                        "idImpuesto": "7152",
+                        "montoImpuesto": "1.00",
+                        "tipoAfectacion": "30",
+                        "montoBase": "2",
+                        "porcentaje": "0.50"
+                    }
+                ],
+                "valorVenta": "1",
+                "montoTotalImpuestos": "1.00"
+            }
+        ],
+        "ADI": [
+            {
+                "tituloAdicional": "CUENTAS CORRIENTES",
+                "valorAdicional": "191-00000-00000-000 Banco de Crédito\r\n0001-0302020-040303 Interbank\r\n0011-0000-000000000 BBVA\r\n0010-0000000000000 BANBIF"
+            }
+        ]
+    }
+}

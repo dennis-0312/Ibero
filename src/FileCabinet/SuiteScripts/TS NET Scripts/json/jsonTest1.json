@@ -1,0 +1,153 @@
+{
+    "factura": {
+        "IDE": {
+            "numeracion": "F111-00000013",
+            "fechaEmision": "2023-01-06",
+            "horaEmision": "13:41:00",
+            "codTipoDocumento": "01",
+            "tipoMoneda": "PEN",
+            "numeroOrdenCompra": "",
+            "fechaVencimiento": ""
+        },
+        "EMI": {
+            "tipoDocId": "6",
+            "numeroDocId": "20295754444",
+            "nombreComercial": "",
+            "razonSocial": "IBERO A. & G. S.A.C.",
+            "direccion": "AV. OSCAR R. BENAVIDES ",
+            "departamento": "Lima",
+            "provincia": "",
+            "distrito": "",
+            "codigoPais": "PE",
+            "telefono": "+51 987 113 775",
+            "correoElectronico": "jcoronado_asc@myevol.biz",
+            "codigoAsigSUNAT": "0000"
+        },
+        "REC": {
+            "tipoDocId": "6",
+            "numeroDocId": "10095407256",
+            "razonSocial": "JUAN CARLOS VALENCIA MORENO",
+            "direccion": "Jirón Monterrey 170 ",
+            "departamento": "Lima",
+            "provincia": "Lima",
+            "distrito": "Santiago De Surco",
+            "codigoPais": "PE",
+            "telefono": "+51999096992",
+            "correoElectronico": "jvalenciamoreno@gmail.com"
+        },
+        "DRF": [],
+        "CAB": {
+            "exoneradas": {
+                "codigo": "1003",
+                "totalVentas": "108.80"
+            },
+            "totalImpuestos": [
+                {
+                    "idImpuesto": "9997",
+                    "montoImpuesto": "0.00"
+                }
+            ],
+            "importeTotal": "108.80",
+            "tipoOperacion": "0101",
+            "leyenda": [
+                {
+                    "codigo": "1000",
+                    "descripcion": "CIENTO OCHO SOLES CON OCHENTA CENTIMOS"
+                }
+            ],
+            "montoTotalImpuestos": "0.00",
+            "totalDescuentos": [
+                {
+                    "codigo": "2005",
+                    "totalDescuentos": "10.35"
+                },
+                {
+                    "codigo": "2005",
+                    "totalDescuentos": "8.85"
+                }
+            ],
+            "cargoDescuento": [
+                {
+                    "indicadorCargoDescuento": "false",
+                    "codigoCargoDescuento": "03",
+                    "factorCargoDescuento": "0.15",
+                    "montoCargoDescuento": "10.35",
+                    "montoBaseCargoDescuento": ""
+                },
+                {
+                    "indicadorCargoDescuento": "false",
+                    "codigoCargoDescuento": "03",
+                    "factorCargoDescuento": "0.15",
+                    "montoCargoDescuento": "8.85",
+                    "montoBaseCargoDescuento": ""
+                }
+            ]
+        },
+        "DET": [
+            {
+                "numeroItem": "1",
+                "codigoProducto": "9786124346194",
+                "descripcionProducto": "CEMENTERIO DE ANIMALES",
+                "cantidadItems": "1",
+                "unidad": "NIU",
+                "valorUnitario": "69",
+                "precioVentaUnitario": "58.650000",
+                "cargoDescuento": [
+                    {
+                        "indicadorCargoDescuento": "false",
+                        "codigoCargoDescuento": "00",
+                        "factorCargoDescuento": "0.15",
+                        "montoCargoDescuento": "10.35",
+                        "montoBaseCargoDescuento": "69"
+                    }
+                ],
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "9997",
+                        "montoImpuesto": "0.00",
+                        "tipoAfectacion": "20",
+                        "montoBase": "58.65",
+                        "porcentaje": "0"
+                    }
+                ],
+                "valorVenta": "58.65",
+                "montoTotalImpuestos": "0.00"
+            },
+            {
+                "numeroItem": "3",
+                "codigoProducto": "9786124262791",
+                "descripcionProducto": "LA LADRONA DE LIBROS",
+                "cantidadItems": "1",
+                "unidad": "NIU",
+                "valorUnitario": "59",
+                "precioVentaUnitario": "50.150000",
+                "cargoDescuento": [
+                    {
+                        "indicadorCargoDescuento": "false",
+                        "codigoCargoDescuento": "00",
+                        "factorCargoDescuento": "0.15",
+                        "montoCargoDescuento": "8.85",
+                        "montoBaseCargoDescuento": "59"
+                    }
+                ],
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "9997",
+                        "montoImpuesto": "0.00",
+                        "tipoAfectacion": "20",
+                        "montoBase": "50.15",
+                        "porcentaje": "0"
+                    }
+                ],
+                "valorVenta": "50.15",
+                "montoTotalImpuestos": "0.00"
+            }
+        ],
+        "ADI": [
+            {
+                "tituloAdicional": "CUENTAS CORRIENTES",
+                "valorAdicional": ""
+            }
+        ]
+    }
+}

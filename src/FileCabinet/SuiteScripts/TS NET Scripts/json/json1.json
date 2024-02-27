@@ -1,0 +1,88 @@
+{
+    "notaCredito": {
+        "IDE": {
+            "numeracion": "F100-00000001",
+            "fechaEmision": "2023-01-27",
+            "tipoMoneda": "PEN"
+        },
+        "EMI": {
+            "tipoDocId": "6",
+            "numeroDocId": "20295754444",
+            "nombreComercial": "Ibero Librerías",
+            "razonSocial": "IBERO A & G S.A.C.",
+            "direccion": "Av. Oscar R. Benavides (Ex Diagonal) 500, Miraflores  Lima  ",
+            "codigoPais": "PE",
+            "telefono": "015006720",
+            "correoElectronico": "ibero@ibero.com.pe",
+            "codigoAsigSUNAT": "0000"
+        },
+        "REC": {
+            "tipoDocId": "6",
+            "numeroDocId": "20601058147",
+            "razonSocial": "SERVICE CHICOMA'S S.A.C.",
+            "direccion": "JR. MIGUEL  GRAU 362 - URB. CERCADO SANTIAGO DE SURCO",
+            "correoElectronico": ""
+        },
+        "DRF": [
+            {
+                "tipoDocRelacionado": "",
+                "numeroDocRelacionado": "-",
+                "codigoMotivo": "07",
+                "descripcionMotivo": "Devolucion por item"
+            }
+        ],
+        "CAB": {
+            "gravadas": {
+                "codigo": "1001",
+                "totalVentas": "87.29"
+            },
+            "totalImpuestos": [
+                {
+                    "idImpuesto": "1000",
+                    "montoImpuesto": "15.71"
+                }
+            ],
+            "importeTotal": "103.00",
+            "tipoOperacion": "0101",
+            "leyenda": [
+                {
+                    "codigo": "1000",
+                    "descripcion": "CIENTO TRES SOLES "
+                }
+            ],
+            "montoTotalImpuestos": "15.71"
+        },
+        "DET": [
+            {
+                "numeroItem": "1",
+                "codigoProducto": "7750822787315",
+                "descripcionProducto": "AGENDA MANAGER DIARIA",
+                "cantidadItems": "1",
+                "unidad": "NIU",
+                "valorUnitario": "87.29",
+                "precioVentaUnitario": "103.0022",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "1000",
+                        "montoImpuesto": "15.71",
+                        "tipoAfectacion": "10",
+                        "montoBase": "87.29",
+                        "porcentaje": "18"
+                    }
+                ],
+                "valorVenta": "87.29",
+                "montoTotalImpuestos": "15.71"
+            }
+        ],
+        "ADI": [
+            {
+                "tituloAdicional": "CUENTAS CORRIENTES",
+                "valorAdicional": "BANCO DE CRÉDITO DEL PERÚ\r\nBCP - CTA. CTE. S/ 194-0159868026\r\nCCI BCP MN           002-194-000203272162-99\r\nSOLES\r\n\r\nBCP - CTA. CTE. $ 194-0203272162\r\nCCI BCP ME           002-194-0000203272162-99\r\nDOLARES"
+            },
+            {
+                "tituloAdicional": "NOTA",
+                "valorAdicional": ""
+            }
+        ]
+    }
+}

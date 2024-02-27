@@ -1,0 +1,363 @@
+{
+    "factura": {
+        "IDE": {
+            "numeracion": "FE01-00000118",
+            "fechaEmision": "2022-02-01",
+            "horaEmision": "10:06:00",
+            "codTipoDocumento": "01",
+            "tipoMoneda": "PEN",
+            "numeroOrdenCompra": "OV-818",
+            "fechaVencimiento": "2022-02-01"
+        },
+        "EMI": {
+            "tipoDocId": "6",
+            "numeroDocId": "20607288209",
+            "nombreComercial": "Feniziam",
+            "razonSocial": "Feniziam S.A.C.",
+            "ubigeo": "200501",
+            "direccion": "MZA. D LOTE. 6 Z.I. II (ZED PAITA)",
+            "departamento": "Paita",
+            "provincia": "Lima",
+            "distrito": "Paita",
+            "codigoPais": "PE",
+            "telefono": "123456789",
+            "correoElectronico": "jesus.coronado@myevol.biz",
+            "codigoAsigSUNAT": "0000"
+        },
+        "REC": {
+            "tipoDocId": "6",
+            "numeroDocId": "20100070970",
+            "razonSocial": "Dennis market",
+            "direccion": "av. libetadores una cuadra antes de Morropon",
+            "departamento": "Morropon",
+            "provincia": "Piura",
+            "distrito": "Morropon",
+            "codigoPais": "PE",
+            "telefono": "949199789",
+            "correoElectronico": "dennis.fernandez@myevol.biz"
+        },
+        "DRF": [
+            {
+                "tipoDocRelacionado": "09",
+                "numeroDocRelacionado": "-"
+            }
+        ],
+        "CAB": {
+            "gravadas": {
+                "codigo": "1001",
+                "totalVentas": "1626.55"
+            },
+            "inafectas": {
+                "codigo": "1002",
+                "totalVentas": "468.64"
+            },
+            "exoneradas": {
+                "codigo": "1003",
+                "totalVentas": "702.96"
+            },
+            "totalImpuestos": [
+                {
+                    "idImpuesto": "1000",
+                    "montoImpuesto": "292.77"
+                },
+                {
+                    "idImpuesto": "9998",
+                    "montoImpuesto": "0.00"
+                },
+                {
+                    "idImpuesto": "9997",
+                    "montoImpuesto": "0.00"
+                }
+            ],
+            "importeTotal": "3090.92",
+            "tipoOperacion": "0101",
+            "leyenda": [
+                {
+                    "codigo": "1000",
+                    "descripcion": "TRES MIL NOVENTA SOLES CON NOVENTA Y DOS CENTIMOS"
+                }
+            ],
+            "montoTotalImpuestos": "292.77",
+            "cargoDescuento": [
+                {
+                    "indicadorCargoDescuento": "false",
+                    "codigoCargoDescuento": "02",
+                    "factorCargoDescuento": "0.1",
+                    "montoCargoDescuento": "310.91",
+                    "montoBaseCargoDescuento": "3109.06"
+                }
+            ]
+        },
+        "DET": [
+            {
+                "numeroItem": "1",
+                "codigoProducto": "001-INAFECTO",
+                "descripcionProducto": "FEL - Artículo de Prueba",
+                "cantidadItems": "2",
+                "unidad": "PK",
+                "valorUnitario": "234.32",
+                "precioVentaUnitario": "234.32",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "9998",
+                        "montoImpuesto": "0",
+                        "tipoAfectacion": "30",
+                        "montoBase": "468.64",
+                        "porcentaje": "0"
+                    }
+                ],
+                "valorVenta": "468.64",
+                "montoTotalImpuestos": "0"
+            },
+            {
+                "numeroItem": "2",
+                "codigoProducto": "002-EXENTO",
+                "descripcionProducto": "002 -FEL - Artículo de Prueba",
+                "cantidadItems": "3",
+                "unidad": "PK",
+                "valorUnitario": "234.32",
+                "precioVentaUnitario": "234.32",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "9997",
+                        "montoImpuesto": "0",
+                        "tipoAfectacion": "20",
+                        "montoBase": "702.96",
+                        "porcentaje": "0"
+                    }
+                ],
+                "valorVenta": "702.96",
+                "montoTotalImpuestos": "0"
+            },
+            {
+                "numeroItem": "3",
+                "codigoProducto": "003-IGV",
+                "descripcionProducto": "003-FEL - Artículo de Prueba",
+                "cantidadItems": "5",
+                "unidad": "PK",
+                "valorUnitario": "300",
+                "precioVentaUnitario": "354",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "1000",
+                        "montoImpuesto": "270",
+                        "tipoAfectacion": "10",
+                        "montoBase": "1500",
+                        "porcentaje": "18"
+                    }
+                ],
+                "valorVenta": "1500",
+                "montoTotalImpuestos": "270"
+            },
+            {
+                "numeroItem": "4",
+                "codigoProducto": "1000050",
+                "descripcionProducto": "LECHE IDEAL AMANECER 395GR (24und)",
+                "cantidadItems": "1",
+                "unidad": "PK",
+                "valorUnitario": "46.61017",
+                "precioVentaUnitario": "55.0000006",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "1000",
+                        "montoImpuesto": "8.39",
+                        "tipoAfectacion": "10",
+                        "montoBase": "46.61",
+                        "porcentaje": "18"
+                    }
+                ],
+                "valorVenta": "46.61",
+                "montoTotalImpuestos": "8.39"
+            },
+            {
+                "numeroItem": "5",
+                "codigoProducto": "1000360",
+                "descripcionProducto": "Leche Evaporada Entera Gloria  Azul  170gr X 48und",
+                "cantidadItems": "1",
+                "unidad": "PK",
+                "valorUnitario": "66.94915",
+                "precioVentaUnitario": "78.9999970",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "1000",
+                        "montoImpuesto": "12.05",
+                        "tipoAfectacion": "10",
+                        "montoBase": "66.95",
+                        "porcentaje": "18"
+                    }
+                ],
+                "valorVenta": "66.95",
+                "montoTotalImpuestos": "12.05"
+            },
+            {
+                "numeroItem": "6",
+                "codigoProducto": "1000220",
+                "descripcionProducto": "Leche Evaporada Entera Gloria  Azul  400gr X 24und",
+                "cantidadItems": "1",
+                "unidad": "PK",
+                "valorUnitario": "60.16949",
+                "precioVentaUnitario": "70.9999982",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "1000",
+                        "montoImpuesto": "10.83",
+                        "tipoAfectacion": "10",
+                        "montoBase": "60.17",
+                        "porcentaje": "18"
+                    }
+                ],
+                "valorVenta": "60.17",
+                "montoTotalImpuestos": "10.83"
+            },
+            {
+                "numeroItem": "7",
+                "codigoProducto": "1000510",
+                "descripcionProducto": "Leche Evaporada Entera Gloria  Roja  170gr X 48und",
+                "cantidadItems": "1",
+                "unidad": "PK",
+                "valorUnitario": "76.27119",
+                "precioVentaUnitario": "90.0000042",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "1000",
+                        "montoImpuesto": "13.73",
+                        "tipoAfectacion": "10",
+                        "montoBase": "76.27",
+                        "porcentaje": "18"
+                    }
+                ],
+                "valorVenta": "76.27",
+                "montoTotalImpuestos": "13.73"
+            },
+            {
+                "numeroItem": "8",
+                "codigoProducto": "1000500",
+                "descripcionProducto": "Leche Evaporada Entera Gloria  Roja  400gr X 24und",
+                "cantidadItems": "1",
+                "unidad": "PK",
+                "valorUnitario": "71.18644",
+                "precioVentaUnitario": "83.9999992",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "1000",
+                        "montoImpuesto": "12.81",
+                        "tipoAfectacion": "10",
+                        "montoBase": "71.19",
+                        "porcentaje": "18"
+                    }
+                ],
+                "valorVenta": "71.19",
+                "montoTotalImpuestos": "12.81"
+            },
+            {
+                "numeroItem": "9",
+                "codigoProducto": "1000230",
+                "descripcionProducto": "Leche Puravida  395gr X 24und",
+                "cantidadItems": "1",
+                "unidad": "PK",
+                "valorUnitario": "50.84746",
+                "precioVentaUnitario": "60.0000028",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "1000",
+                        "montoImpuesto": "9.15",
+                        "tipoAfectacion": "10",
+                        "montoBase": "50.85",
+                        "porcentaje": "18"
+                    }
+                ],
+                "valorVenta": "50.85",
+                "montoTotalImpuestos": "9.15"
+            },
+            {
+                "numeroItem": "10",
+                "codigoProducto": "1000240",
+                "descripcionProducto": "Leche Ideal Cremosita  395gr X 24und",
+                "cantidadItems": "1",
+                "unidad": "PK",
+                "valorUnitario": "56.94915",
+                "precioVentaUnitario": "67.199997",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "1000",
+                        "montoImpuesto": "10.25",
+                        "tipoAfectacion": "10",
+                        "montoBase": "56.95",
+                        "porcentaje": "18"
+                    }
+                ],
+                "valorVenta": "56.95",
+                "montoTotalImpuestos": "10.25"
+            },
+            {
+                "numeroItem": "11",
+                "codigoProducto": "Delivery",
+                "descripcionProducto": "Delivery",
+                "cantidadItems": "1",
+                "unidad": "ZZ",
+                "valorUnitario": "8.47",
+                "precioVentaUnitario": "9.9946",
+                "totalImpuestos": [
+                    {
+                        "idImpuesto": "1000",
+                        "montoImpuesto": "1.52",
+                        "tipoAfectacion": "10",
+                        "montoBase": "8.47",
+                        "porcentaje": "18"
+                    }
+                ],
+                "valorVenta": "8.47",
+                "montoTotalImpuestos": "1.52"
+            }
+        ],
+        "ADI": [
+            {
+                "tituloAdicional": "@@codCliente",
+                "valorAdicional": "CL-199"
+            },
+            {
+                "tituloAdicional": "@@condPago",
+                "valorAdicional": "Contado"
+            },
+            {
+                "tituloAdicional": "@@dirDestino",
+                "valorAdicional": ""
+            },
+            {
+                "tituloAdicional": "@@transportista",
+                "valorAdicional": " "
+            },
+            {
+                "tituloAdicional": "@@rucTransportista",
+                "valorAdicional": ""
+            },
+            {
+                "tituloAdicional": "@@placaVehic",
+                "valorAdicional": ""
+            },
+            {
+                "tituloAdicional": "@@zona"
+            },
+            {
+                "tituloAdicional": "@@modulo",
+                "valorAdicional": "Sullana-Almacén"
+            },
+            {
+                "tituloAdicional": "@@nroInterno",
+                "valorAdicional": "ZUP-00000563-2021"
+            },
+            {
+                "tituloAdicional": "@@vendedor",
+                "valorAdicional": " "
+            },
+            {
+                "tituloAdicional": "@@localidad",
+                "valorAdicional": "Piura: Paita: Paita "
+            },
+            {
+                "tituloAdicional": "@@ordCarga",
+                "valorAdicional": "EJ-472"
+            }
+        ]
+    }
+}
